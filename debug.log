@@ -1,2 +1,3 @@
 [0728/154321.548:ERROR:process_info.cc(359)] UncheckedAllocate
 [0728/154428.739:ERROR:process_info.cc(359)] UncheckedAllocate
+[0728/170251.399:ERROR:process_info.cc(375)] NtQuerySystemInformation SystemExtendedHandleInformation: O comprimento do registro de informações especificado não coincide com o comprimento necessário à classe de informações especificada. (0xc0000004)
