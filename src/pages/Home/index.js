@@ -16,7 +16,7 @@ export default class Home extends Component {
   async componentDidMount() {
     const response = await api.get('products');
 
-    /**this down here is for do not call func in the render */
+    /**this here down it's for do not call func in the render */
     const data = response.data.map(product => ({
       ...product,
       priceFormatted: formatPrice(product.price)
