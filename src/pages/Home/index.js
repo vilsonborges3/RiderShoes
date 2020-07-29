@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import { MdAddShoppingCart } from 'react-icons/md';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
 import { formatPrice } from '../../util/format'
 
 import api from '../../services/api';
+
+import * as CartActions from '../../store/modules/cart/actions';
 
 import { ProductList } from './styles';
 
@@ -26,13 +30,10 @@ class Home extends Component {
 
   handleAddProduct = product => {
     /**All componnet connect with redux receive a prop named dispatch */
-    const { dispatch } = this.props;
+    const { addToCart } = this.props;
 
     /**into the dispatch we've got put us object it is the ACTION */
-    dispatch({
-      type: 'ADD_TO_CART',
-      product,
-    });
+    addToCart(product);
 
   };
 
@@ -64,4 +65,8 @@ class Home extends Component {
   }
 }
 
-export default connect()(Home);
+/** Puting the actions into the props in the component */
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(CartActions, dispatch);
+
+export default connect(null, mapDispatchToProps)(Home);
