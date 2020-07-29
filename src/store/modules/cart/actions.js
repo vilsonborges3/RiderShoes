@@ -8,6 +8,15 @@ export function addToCart(product){
 export function removeFromCart(id){
   return {
     type: '@cart/REMOVE',
-    id: id
+    id,
+  };
+}
+
+export function updateAmount(id, amount){
+  console.log('updateAm');
+  return {
+    type: '@cart/UPDATE_AMOUNT',
+    id,
+    amount,
   };
 }
