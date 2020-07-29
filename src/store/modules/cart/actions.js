@@ -13,7 +13,6 @@ export function removeFromCart(id){
 }
 
 export function updateAmount(id, amount){
-  console.log('updateAm');
   return {
     type: '@cart/UPDATE_AMOUNT',
     id,
