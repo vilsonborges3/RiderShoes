@@ -27,11 +27,13 @@ class Home extends Component {
   handleAddProduct = product => {
     /**All componnet connect with redux receive a prop named dispatch */
     const { dispatch } = this.props;
+
     /**into the dispatch we've got put us object it is the ACTION */
     dispatch({
       type: 'ADD_TO_CART',
       product,
-    })
+    });
+
   };
 
   render() {
