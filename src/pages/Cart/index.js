@@ -16,7 +16,6 @@ function Cart({ cart, total, removeFromCart, updateAmountRequest }) {
   }
 
   function decrement(product){
-
     updateAmountRequest(product.id, product.amount - 1);
   }
 
